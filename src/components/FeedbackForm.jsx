@@ -4,6 +4,11 @@ import Button from './shared/Button'
 
 function FeedbackForm() {
     const [text, setText] = useState('')
+    const [btnDisabled, setBtnDisabled] = useState(true)
+    const [message, setMessage] = useState('')
+
+
+
     const handleTextChange = (e) => {
         setText(e.target.value)
     }
@@ -13,7 +18,7 @@ function FeedbackForm() {
                 <h2>How would you rate your service?</h2>
                 <div className="input-group">
                     <input value= {text} onChange={handleTextChange} type="text" placeholder='Write a Review'/>
-                    <Button type='submit'>
+                    <Button type='submit' isDisabled={btnDisabled}>
                         Send
                     </Button>
                 </div>
