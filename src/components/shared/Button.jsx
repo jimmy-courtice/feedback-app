@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import { version } from 'react-dom'
 
 function Button({children, version, type, isDisabled}) {
   return (
